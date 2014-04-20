@@ -1,10 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Unmark\n"
-"POT-Creation-Date: 2014-04-04 10:02+0800\n"
-"PO-Revision-Date: 2014-04-04 14:36+0800\n"
+"POT-Creation-Date: 2014-04-02 15:41+0100\n"
+"PO-Revision-Date: 2014-04-20 23:34+0800\n"
 "Last-Translator: hewig <hewigovens@gmail.com>\n"
 "Language-Team: Plain\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,7 +13,6 @@ msgstr ""
 "X-Poedit-Basepath: ../../\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Language: zh_Hans_CN\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: application/controllers/install.php:71
@@ -335,16 +335,6 @@ msgstr "由于我们的错误，无法完成请求。"
 msgid "Could not delete your twitter settings at this time."
 msgstr "现在无法删除您的twitter设置。"
 
-#: application/libraries/Plain_Migration.php:194
-#, php-format
-msgid ""
-"Migrations switched from timestamp to unmark, but cannot find mapping for "
-"version %s. Please add correct version to migrations_mapping config entry "
-"for migrations"
-msgstr ""
-"从timestamp迁移到unmark，无法找到版本%s的mapping。请将正确版本添加到"
-"migrations_mapping配置文件。"
-
 #: application/views/import/index.php:3
 msgid "Unmark : Importer"
 msgstr "Unmark：导入"
@@ -398,23 +388,28 @@ msgstr "账号 %s"
 
 #: application/views/layouts/accountlinks.php:3
 #: application/views/layouts/userforms.php:4
+#: custom/views/layouts/accountlinks.php:22
 msgid "Change Password"
 msgstr "修改密码"
 
 #: application/views/layouts/accountlinks.php:4
 #: application/views/layouts/userforms.php:16
+#: custom/views/layouts/accountlinks.php:23
 msgid "Change Email Address"
 msgstr "修改邮件地址"
 
 #: application/views/layouts/accountlinks.php:5
+#: custom/views/layouts/accountlinks.php:33
 msgid "Import or Export Marks"
 msgstr "导入或导出书签"
 
 #: application/views/layouts/accountlinks.php:6
+#: custom/views/layouts/accountlinks.php:34
 msgid "Invite Others"
 msgstr "邀请朋友"
 
-#: application/views/layouts/header.php:9
+#: application/views/layouts/header.php:9 custom/views/admin/users.php:3
+#: custom/views/marks/upgrade_notice.php:37
 msgid "Unmark"
 msgstr "Unmark"
 
@@ -424,6 +419,7 @@ msgstr "查看/隐藏详情"
 
 #: application/views/layouts/navigation.php:7
 #: application/views/layouts/navigation/nav_icons.php:7
+#: custom/views/layouts/navigation.php:13
 msgid "Settings"
 msgstr "设置"
 
@@ -505,6 +501,7 @@ msgid "Get the Chrome Extension"
 msgstr "安装Chrome扩展程序"
 
 #: application/views/layouts/navigation/tags_list.php:6
+#: custom/views/layouts/navigation/tags_list.php:12
 msgid "No Tags Found"
 msgstr "暂无Tag"
 
@@ -662,6 +659,7 @@ msgid_plural "marks tagged %s"
 msgstr[0] "含有tag %s 的书签"
 
 #: application/views/marks/index.php:28
+#: custom/views/marks/upgrade_notice.php:12
 #, php-format
 msgid "mark found containing \"%s\""
 msgid_plural "marks found containing \"%s\""
@@ -673,12 +671,14 @@ msgid_plural "marks"
 msgstr[0] "书签"
 
 #: application/views/marks/index.php:40
+#: custom/views/marks/upgrade_notice.php:20
 #, php-format
 msgid "mark created in the %s"
 msgid_plural "marks created in the %s"
 msgstr[0] "在 %s 中创建的书签"
 
 #: application/views/marks/index.php:42
+#: custom/views/marks/upgrade_notice.php:22
 #, php-format
 msgid "mark created %s"
 msgid_plural "marks created %s"
@@ -721,11 +721,13 @@ msgid "Register For"
 msgstr "注册"
 
 #: application/views/register/index.php:27 application/views/welcome.php:37
-#: application/views/welcome.php:54
+#: application/views/welcome.php:54 custom/views/welcome.php:37
+#: custom/views/welcome.php:52
 msgid "Email Address"
 msgstr "电子邮件地址"
 
 #: application/views/register/index.php:28 application/views/welcome.php:38
+#: custom/views/welcome.php:38
 msgid "Password"
 msgstr "密码"
 
@@ -785,15 +787,15 @@ msgstr "帮助"
 msgid "UNMARK.IT"
 msgstr "UNMARK.IT"
 
-#: application/views/welcome.php:7
+#: application/views/welcome.php:7 custom/views/welcome.php:7
 msgid "Unmark - The to do app for bookmarks."
 msgstr "Unmark - 为书签量身打造的Todo应用。"
 
-#: application/views/welcome.php:34
+#: application/views/welcome.php:34 custom/views/welcome.php:34
 msgid "Sign In To"
 msgstr "登入"
 
-#: application/views/welcome.php:42
+#: application/views/welcome.php:42 custom/views/welcome.php:42
 msgid "Forgot Password?"
 msgstr "忘记密码？"
 
@@ -801,53 +803,198 @@ msgstr "忘记密码？"
 msgid "Visit Us"
 msgstr "访问我们"
 
-#: application/views/welcome.php:44
+#: application/views/welcome.php:44 custom/views/welcome.php:64
 msgid "What is Unmark?"
 msgstr "什么是Unmark？"
 
-#: application/views/welcome.php:51
+#: application/views/welcome.php:51 custom/views/welcome.php:49
 msgid "Reset Password For"
 msgstr "重置密码"
 
-#: application/views/welcome.php:58
+#: application/views/welcome.php:58 custom/views/welcome.php:56
 msgid "Sign into your account"
 msgstr "登入"
 
-#: application/views/welcome.php:58
+#: application/views/welcome.php:58 custom/views/welcome.php:56
 msgid "Need to Sign In?"
 msgstr "直接登录？"
 
-#~ msgid "FREE ACCOUNT"
-#~ msgstr "免费账号"
+#: custom/controllers/cutils.php:38
+#, php-format
+msgid "File with translation phrases generated succesfully and saved as %s."
+msgstr "生成翻译文件成功，保存为%s。"
 
-#~ msgid "Upgrade"
-#~ msgstr "升级"
+#: custom/controllers/cutils.php:41
+#, php-format
+msgid "Error opening file %s for writing"
+msgstr "写入文件错误 %s"
 
-#~ msgid "Search your marks"
-#~ msgstr "搜索书签"
+#: custom/controllers/cutils.php:44
+#, php-format
+msgid "Error opening file %s."
+msgstr "打开文件出错%s。"
 
-#~ msgid "UPGRADE NOW"
-#~ msgstr "立刻升级"
+#: custom/views/layouts/accountlinks.php:4
+msgid "ADMIN ACCOUNT"
+msgstr "管理员账号"
 
-#~ msgid "Disconnect Twitter"
-#~ msgstr "解除Twitter绑定"
+#: custom/views/layouts/accountlinks.php:6
+msgid "PAID ACCOUNT"
+msgstr "付费账号"
 
-#~ msgid "Connect Twitter"
-#~ msgstr "绑定Twitter"
+#: custom/views/layouts/accountlinks.php:8
+msgid "FREE ACCOUNT"
+msgstr "免费账号"
 
-#~ msgid "OK"
-#~ msgstr "OK"
+#: custom/views/layouts/accountlinks.php:16
+msgid "Manage Paid Account"
+msgstr "管理付费账号"
 
-#~ msgid "Sorry, you have exceded your daily or total limit."
-#~ msgstr "抱歉，"
+#: custom/views/layouts/accountlinks.php:18
+msgid "Restart Paid Account"
+msgstr "重新启用付费账号"
+
+#: custom/views/layouts/accountlinks.php:20
+msgid "Upgrade to Paid"
+msgstr "升级到付费账号"
+
+#: custom/views/layouts/accountlinks.php:27
+#: custom/views/layouts/userforms.php:93
+msgid "Disconnect from Twitter"
+msgstr "解除Twitter绑定"
+
+#: custom/views/layouts/accountlinks.php:29
+#: custom/views/layouts/userforms.php:104
+msgid "Connect with Twitter"
+msgstr "绑定Twitter"
+
+#: custom/views/layouts/navigation.php:4
+#: custom/views/layouts/navigation.php:11
+msgid "Upgrade"
+msgstr "升级"
+
+#: custom/views/layouts/navigation.php:19
+msgid ""
+"You are currently using a free account, which is limited. Upgrade now and "
+"gain the ability to:"
+msgstr "您正在使用受限制的免费账号，现在升级立刻享有："
+
+#: custom/views/layouts/navigation.php:23
+msgid "Save as many marks as you'd like each day"
+msgstr "每天不限保存书签枚数"
+
+#: custom/views/layouts/navigation.php:27
+msgid "Keep and access an unlimited amount of marks"
+msgstr "保存无限数量书签"
+
+#: custom/views/layouts/navigation.php:31
+msgid "Search your marks"
+msgstr "搜索书签"
+
+#: custom/views/layouts/navigation.php:34
+#: custom/views/layouts/sidebar/sidebar_notices.php:19
+#: custom/views/marks/upgrade_notice.php:30
+#: custom/views/marks/upgrade_notice.php:47
+msgid "UPGRADE NOW"
+msgstr "立刻升级"
+
+#: custom/views/layouts/navigation/tags_list.php:7
+msgid "Upgrade for more tags"
+msgstr "升级获得更多tag"
+
+#: custom/views/layouts/sidebar/sidebar_notices.php:3
+msgid ""
+"For usage tips <a href=\"https://twitter.com/unmarkit\">follow us on "
+"Twitter</a>! Please tell your friends about Unmark."
+msgstr ""
+"更多使用技巧，<a target=\"_blank\" href=\"https://twitter.com/unmarkit\">请关"
+"注我们的Twitter</a>! 请把Unmark分享给您的朋友。"
+
+#: custom/views/layouts/sidebar/sidebar_notices.php:17
+msgid "Looks like you are over either your daily or total limit."
+msgstr "您似乎已经达到每日或总共书签限额."
+
+#: custom/views/layouts/sidebar/sidebar_notices.php:18
+msgid "Upgrade to a paid account and save an unlimited amount of marks."
+msgstr "升级到付费账号保存无限数量书签。"
+
+#: custom/views/layouts/sidebar/sidebar_notices.php:22
+msgid "Here are a few interesting marks to get you started..."
+msgstr "从这些"
+
+#: custom/views/layouts/userforms.php:100
+msgid "You are currently connected to the Twitter account above."
+msgstr "上面是您当前绑定的Twitter账号。"
+
+#: custom/views/layouts/userforms.php:102
+msgid "Disconnect Twitter"
+msgstr "解除Twitter绑定"
+
+#: custom/views/layouts/userforms.php:105
+msgid ""
+"By connecting your account with Twitter, we will automatically import any "
+"link contained in a tweet that you favorite."
+msgstr "通过绑定您的Twiiter账号，我们会自动导入您收藏的tweet中的链接。"
+
+#: custom/views/layouts/userforms.php:106
+msgid "Note: We will never tweet on your behalf."
+msgstr "声明：我们绝不会代表你发推。"
+
+#: custom/views/layouts/userforms.php:107
+msgid "Connect Twitter"
+msgstr "绑定Twitter"
+
+#: custom/views/layouts/userforms.php:114
+msgid ""
+"Sorry, your Twitter account could not be connected at this time, please try "
+"again."
+msgstr "抱歉，无法连接到您的Twitter账号，请重试。"
+
+#: custom/views/layouts/userforms.php:115
+#: custom/views/layouts/userforms.php:122
+msgid "OK"
+msgstr "OK"
+
+#: custom/views/layouts/userforms.php:120
+msgid "Your Twitter account has been successfully connected."
+msgstr "成功绑定了您的Twitter账号。"
+
+#: custom/views/layouts/userforms.php:121
+msgid "We will now import the links in any tweet that you favorite."
+msgstr "我们现在将导入您收藏tweet中的链接。"
+
+#: custom/views/marks/upgrade_notice.php:14
+#, php-format
+msgid "No marks found containing \"%s\""
+msgstr "未找到含有 \"%s\" 的书签"
+
+#: custom/views/marks/upgrade_notice.php:29
+msgid "Search results are available for paid accounts"
+msgstr "付费账号才能查看搜索结果"
+
+#: custom/views/marks/upgrade_notice.php:44
+msgid "Sorry, you have exceded your daily or total limit."
+msgstr "抱歉，"
+
+#: custom/views/marks/upgrade_notice.php:46
+#, php-format
+msgid ""
+"Please check out our <a href=\"%s\" target=\"_blank\">FAQ</a> for more "
+"information."
+msgstr "更多详情请阅读<a href=\"%s\" target=\"_blank\">FAQ</a>。"
+
+#: custom/views/welcome.php:42
+msgid "Register for free"
+msgstr "免费注册"
+
+#: custom/views/welcome.php:42
+msgid "Register Free"
+msgstr "免费注册"
 
 #~ msgid ""
-#~ "Please check out our <a href=\"%s\" target=\"_blank\">FAQ</a> for more "
-#~ "information."
-#~ msgstr "更多详情请阅读<a href=\"%s\" target=\"_blank\">FAQ</a>。"
-
-#~ msgid "Register for free"
-#~ msgstr "免费注册"
-
-#~ msgid "Register Free"
-#~ msgstr "免费注册"
+#~ "Migrations switched from timestamp to unmark, but cannot find mapping for "
+#~ "version %s. Please add correct version to migrations_mapping config entry "
+#~ "for migrations"
+#~ msgstr ""
+#~ "从timestamp迁移到unmark，无法找到版本%s的mapping。请将正确版本添加到"
+#~ "migrations_mapping配置文件。"
